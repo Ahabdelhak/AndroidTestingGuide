@@ -42,7 +42,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     //testImplementation > for test src set & androidTestImplementation> for androidTest src set
-    //for making use cases more readability
+    //Truth makes your test assertions and failure messages more readable.
     testImplementation "com.google.truth:truth:1.0.1"
     androidTestImplementation "com.google.truth:truth:1.0.1"
 }
