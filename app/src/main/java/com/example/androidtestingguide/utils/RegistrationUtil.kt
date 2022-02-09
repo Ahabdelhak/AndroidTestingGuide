@@ -1,4 +1,4 @@
-package com.example.androidtestingguide
+package com.example.androidtestingguide.utils
 
 object RegistrationUtil {
     private val existingUsers = listOf("Mohamed", "Ali")

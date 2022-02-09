@@ -1,4 +1,4 @@
-package com.example.androidtestingguide
+package com.example.androidtestingguide.utils
 
 import android.content.Context
 
