@@ -1,7 +1,8 @@
-package com.example.androidtestingguide
+package com.example.androidtestingguide.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.androidtestingguide.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

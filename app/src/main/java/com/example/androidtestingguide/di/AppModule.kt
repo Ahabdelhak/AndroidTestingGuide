@@ -2,8 +2,11 @@ package com.example.androidtestingguide.di
 
 import android.content.Context
 import androidx.room.Room
+import com.example.androidtestingguide.data.local.ShoppingDao
 import com.example.androidtestingguide.data.local.ShoppingItemDatabase
 import com.example.androidtestingguide.data.remote.PixabayAPI
+import com.example.androidtestingguide.repository.DefaultShoppingRepository
+import com.example.androidtestingguide.repository.ShoppingRepository
 import com.example.androidtestingguide.utils.Constants.BASE_URL
 import com.example.androidtestingguide.utils.Constants.DATABASE_NAME
 import dagger.Module
@@ -24,6 +27,15 @@ object AppModule {
     fun provideShoppingItemDatabase(
         @ApplicationContext context: Context
     ) = Room.databaseBuilder(context, ShoppingItemDatabase::class.java, DATABASE_NAME).build()
+
+
+    @Singleton
+    @Provides
+    fun provideDefaultShoppingRepository(
+        dao: ShoppingDao,
+        api: PixabayAPI
+    ) = DefaultShoppingRepository(dao, api) as ShoppingRepository
+
 
     @Singleton
     @Provides
